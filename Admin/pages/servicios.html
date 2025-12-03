@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuquerí | Servicios</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../resources/logo.svg" alt="Logo Yuquerí" class="logo">
+      </div>
+      <nav>
+        <div>
+          <a href="../pages/servicios.html" class="active">Servicios</a>
+          <a href="../pages/galeria.html">Galería</a>
+        </div>
+        <a href="#" id="logoutBtn">Cerrar sesión</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <h1>Servicios</h1>
+      <form id="serviceForm">
+        <h2>Agregar nuevo servicio</h2>
+        <div class="form-container">
+          <input type="text" id="icon" placeholder="Ícono Font Awesome (ej: fa-dog o fa-regular fa-dog)" />
+          <input type="text" id="title" placeholder="Título" required />
+          <textarea id="description" placeholder="Descripción"></textarea>
+          <input type="number" id="price" placeholder="Precio" />
+          <input type="text" id="priceText" placeholder="Texto del precio (ej: $600/noche)" />
+          <input type="text" id="includes" placeholder="Incluye (separar por comas)" />
+          <input type="file" id="image" accept="image/*" />
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" id="active" name="active" checked />
+              Activo
+            </label>
+            <label>
+              <input type="checkbox" id="adicional" name="adicional" /> Adicional
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="button-primary">Guardar</button>
+      </form>
+
+      <div class="grid-container">
+        <table class="table" id="servicesTable" aria-describedby="Listado de servicios">
+          <thead>
+            <tr>
+              <th>Icono</th>
+              <th>Título</th>
+              <th>Descripción</th>
+              <th>Imagen</th>
+              <th>Estado</th>
+              <th>Adicional</th>
+              <th>Precio</th>
+              <th>Texto</th>
+              <th>Incluye</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="servicesBody">
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <div id="editModal" class="modal hidden">
+      <div class="modal-background" data-close="true"></div>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+        <h2 id="editTitle">Editar servicio</h2>
+        <button type="button" class="modal-close" data-close="true">
+          <i class="fa-regular fa-xmark"></i>
+        </button>
+        <div>
+          <form id="editForm" class="modal-form">
+            <label>Título
+              <input type="text" id="edit_title" required />
+            </label>
+            <label>Descripción
+              <textarea id="edit_description"></textarea>
+            </label>
+            <label>Precio
+              <input type="number" id="edit_price" />
+            </label>
+            <label>Texto de precio (ej: $600/noche)
+              <input type="text" id="edit_priceText" />
+            </label>
+            <label>Incluye (separado por comas)
+              <input type="text" id="edit_includes" placeholder="Wifi, Piscina, Desayuno" />
+            </label>
+            <label>Imagen nueva
+              <input type="file" id="edit_image" accept="image/*" />
+            </label>
+            <label>Ícono Font Awesome (ej: fa-dog o fa-regular fa-dog)
+              <input type="text" id="edit_icon" placeholder="fa-dog o fa-regular fa-dog" />
+            </label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" id="edit_active" />
+                Activo
+              </label>
+              <label>
+                <input type="checkbox" id="edit_adicional" />
+                Adicional
+              </label>
+            </div>
+            <div class="modal__actions">
+              <button type="submit" class="button-primary">Guardar cambios</button>
+              <button type="button" id="cancelEdit" class="button-secondary">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/servicios.js"></script>
+    <script>
+      ensureAuthenticated();
+    </script>
+  </body>
+</html>

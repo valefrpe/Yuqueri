@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./recursos/logo.png" alt="Logo">
+        </div>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li class="button-header active"><a href="contacto.html">Conversemos</a></li>
+        </ul>
+
+        <div class="nav-overlay"></div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="table-container-dark">
+        <div class="table-content">
+          <h1 class="text-invert">Contacto y Reservas</h1>
+          <div class="contact-cards">
+            <article class="card">
+              <i class="fa-regular fa-phone"></i>
+              <h3>Teléfono</h3>
+              <p>+598 99 655 204</p>
+            </article>
+
+            <article class="card">
+              <i class="fa-regular fa-envelope"></i>
+              <h3>Email</h3>
+              <p>hotelyuqueri@gmail.com</p>
+            </article>
+
+            <article class="card">
+              <i class="fa-regular fa-location-dot"></i>
+              <h3>Ubicación</h3>
+              <p>15700 Toledo, Canelones</p>
+            </article>
+
+            <article class="card">
+              <i class="fa-regular fa-clock"></i>
+              <h3>Horarios</h3>
+              <p>Todos los días de 7 a 14 hs</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-content">
+        <div class="table-contact">
+          <form class="contact-form">
+            <h2>Envianos tu consulta</h2>
+
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" type="text" placeholder="Ingresá tu nombre">
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Ingresá tu email">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Contanos en qué podemos ayudarte"></textarea>
+
+            <button class="button-primary" type="button">Enviar consulta</button>
+          </form>
+
+          <div class="contact-map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.6754964930997!2d-56.10513739999999!3d-34.7224375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a02e880d05f155%3A0x9ec9374e16d2f565!2sYuquer%C3%AD%20Hotel%20Canino!5e1!3m2!1ses!2suy!4v1731884690573!5m2!1ses!2suy"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>© 2025 Yuquerí. Todos los derechos reservados. Hecho con ❤️ para nuestros amigos peludos.</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

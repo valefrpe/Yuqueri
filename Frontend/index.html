@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inicio</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./recursos/logo.png" alt="Logo">
+        </div>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li class="button-header"><a href="contacto.html">Conversemos</a></li>
+        </ul>
+
+        <div class="nav-overlay"></div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="banner-image">
+          <img src="./recursos/banner.png" alt="Banner" />
+        </div>
+        <div class="banner-text">
+          <h1>Tu compañero <span>seguro</span>,<br/>tu mente <span>tranquila</span></h1>
+        </div>
+      </section>
+
+      <section class="table-content">
+        <h1>Nuestros servicios</h1>
+        <div id="servicesMain" class="service-cards-main"></div>
+      
+        <h2>Servicios adicionales</h2>
+        <div id="servicesAddons" class="service-cards" ></div>
+        <a type="button" href="servicios.html" class="button-primary">Ver más detalles de los servicios</a>
+      </section>
+
+      <section class="table-container-dark">
+        <div class="table-content about-section">
+          <div>
+            <h1 class="text-invert">Sobre nosotros</h1>
+            <p class="text-invert">
+              Somos Darío y Alejandra, y Yuquerí es el reflejo de una pasión convertida en realidad. Lo que comenzó como un sueño hace 21 años, hoy cumple 15 años como un hotel canino consolidado. Siempre estamos en continuo proceso de mejora: desde nuestras instalaciones hasta la calidad de nuestros servicios y la constante capacitación de nuestro equipo.
+            </p>
+            <br>
+            <p class="text-invert">
+              En Yuquerí, somos una gran familia dedicada 100% al cuidado de tus mejores amigos. Para nosotros, esto es más que un trabajo; es nuestra forma de vida. Aquí, la pasión por los perros se une al trabajo y a la vida en familia, creando un espacio único donde cada mascota es parte de nuestra historia.
+            </p>
+          </div>
+          <div class="about-photo">
+            <img src="./recursos/family.png" alt="Familia de Yuquerí" />
+          </div>
+        </div>
+      </section>
+
+      <section class="table-content">
+        <div class="testimonial">
+          <h1>Lo que dicen nuestros clientes</h1>
+          <p>La confianza de las familias es nuestro mayor logro</p>
+          <div class="service-cards">
+            <article class="card">
+              <div class="testimonial-img">
+                <img src="./recursos/testimonio1.png">
+              </div>
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+              </div>
+              <p>"Luna siempre vuelve feliz y cansada del día de campo. El equipo es increíble y me mandan fotos siempre”</p>
+              <h3>María González</h3>
+              <p class="body-small">Dueña de Luna</p>
+            </article>
+
+            <article class="card">
+              <div class="testimonial-img">
+                <img src="./recursos/testimonio2.png">
+              </div>
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+              </div>
+              <p>"Dejé a Max en el hotel por una semana y fue como si estuviera en casa. Las instalaciones son impecables y el cuidado es excepcional"</p>
+              <h3>Carlos Ruiz</h3>
+              <p class="body-small">Dueño de Max</p>
+            </article>
+
+            <article class="card">
+              <div class="testimonial-img">
+                <img src="./recursos/testimonio3.png" alt="Ana Martín">
+              </div>
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+                <i class="fa-solid fa-paw"></i>
+              </div>
+              <p>"Rocky era muy tímido, pero gracias al equipo ahora es más sociable. El cambio ha sido increíble. ¡Gracias por tanto amor!"</p>
+              <h3>Ana Martín</h3>
+              <p class="body-small">Dueña de Rocky</p>
+            </article>
+          </div>
+        </div>
+        
+        <div>
+          <h1>Preguntas Frecuentes</h1>
+          <div>
+            <article class="faq-item open">
+              <button class="faq-question" type="button">
+                <h3>¿Ofrecen descuentos para múltiples perros?</h3>
+                <span class="faq-toggle">−</span>
+              </button>
+              <div class="faq-answer">
+                <p>Sí, ofrecemos 15% de descuento para el segundo perro de la misma familia. También tenemos promociones especiales durante temporadas bajas.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <h3>¿Qué medidas de seguridad tienen?</h3>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>Contamos con predios cercados, supervisión constante, zonas separadas según tamaño y temperamento, y veterinario de referencia ante cualquier eventualidad.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <h3>¿Aceptan perros de todas las edades y tamaños?</h3>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>Sí, recibimos perros de distintas edades y tamaños. Antes del ingreso hacemos una evaluación de temperamento para definir el mejor grupo y tipo de estancia.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <h3>¿Puedo traer la comida de mi perro?</h3>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>Claro, podés traer su ración habitual. También podemos ofrecer alimento balanceado de calidad si lo preferís.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <h3>¿Qué hacen en caso de emergencia médica?</h3>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>Nos comunicamos contigo de inmediato y, si es necesario, derivamos a nuestro veterinario de confianza o al profesional que vos indiques.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <h3>¿Cómo puedo saber cómo está mi perro durante su estancia?</h3>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>Enviamos fotos y videos durante la estadía, y estamos disponibles por WhatsApp para contarte cómo va su día.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>© 2025 Yuquerí. Todos los derechos reservados. Hecho con ❤️ para nuestros amigos peludos.</p>
+    </footer>
+  
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/inicio.js"></script>
+  </body>
+</html>

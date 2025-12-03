@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuquerí | Registro</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+
+  <body class="access-page">
+    <div class="access-card">
+      <img src="../resources/logo.svg" alt="Logo Yuquerí" class="access-logo" />
+      <p>Registrá un usuario</p>
+      <form id="registerForm" class="access-form" autocomplete="off">
+        <div>
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="Ingresá tu email" required />
+        </div>
+        <div>
+          <label for="regPassword">Contraseña</label>
+          <input type="password" id="regPassword" placeholder="Ingresá tu contraseña" required />
+        </div>
+        
+        <p id="regError" class="form-error"></p>
+
+        <button type="submit" class="button-primary">Crear cuenta</button>
+        <p class="access-alt">
+          ¿Ya tenés usuario?
+          <a class="button-link" href="./login.html">Iniciar sesión</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

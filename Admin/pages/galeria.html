@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuquerí | Galería</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../resources/logo.svg" alt="Logo Yuquerí" class="logo">
+      </div>
+      <nav>
+        <div>
+          <a href="../pages/servicios.html">Servicios</a>
+          <a href="../pages/galeria.html" class="active">Galería</a>
+        </div>
+        <a href="#" id="logoutBtn">Cerrar sesión</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <h1>Galería</h1>
+      <form id="galForm">
+        <h2>Agregar nueva imagen</h2>
+        <div class="form-container">
+          <input type="text" id="title" placeholder="Título" required/>
+          <input type="file" id="image" accept="image/*"/>
+          <label>
+            <input type="checkbox" id="active" checked/> Activa
+          </label>
+        </div>
+        <button type="submit" class="button-primary">Guardar</button>
+      </form>
+
+      <div class="grid-container">
+        <table class="table" id="galleryTable" aria-describedby="Listado de imágenes">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Título</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="galList">
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <div id="editModal" class="modal hidden">
+      <div class="modal-background" data-close="true"></div>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+        <h2 id="editTitle">Editar imagen</h2>
+        <button type="button" class="modal-close" data-close="true">
+          <i class="fa-regular fa-xmark"></i>
+        </button>
+        <form id="editForm" class="modal-form">
+          <label>Título
+            <input type="text" id="e_title" required/>
+          </label>
+          <label>Imagen nueva
+            <input type="file" id="e_image" accept="image/*" />
+          </label>
+          <label>
+            <input type="checkbox" id="e_active"/> Activa
+          </label>
+          <div>
+            <button type="submit" class="button-primary">Guardar cambios</button>
+            <button type="button" id="cancelEdit" class="button-secondary">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/galeria.js"></script>
+    <script>
+      ensureAuthenticated();
+    </script>
+  </body>
+</html>

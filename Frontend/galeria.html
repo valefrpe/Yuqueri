@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Galería</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./recursos/logo.png" alt="Logo">
+        </div>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html" class="active">Galería</a></li>
+          <li class="button-header"><a href="contacto.html">Conversemos</a></li>
+        </ul>
+
+        <div class="nav-overlay"></div>
+      </nav>
+    </header>
+
+    <main class="table-content">
+      <section>
+        <h1>Galería de fotos</h1>
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <p id="galleryMessage" class="gallery-empty" hidden></p>
+      </section>
+
+      <div class="image-modal" id="imageModal" aria-hidden="true">
+        <div class="image-modal-overlay" data-close="true"></div>
+        <div class="image-modal-content">
+          <p id="modalTitle" class="image-modal-title"></p>
+          <button class="image-modal-close" data-close="true">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="image-modal-img-wrap">
+            <img id="modalImage" src="" alt="">
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>© 2025 Yuquerí. Todos los derechos reservados. Hecho con ❤️ para nuestros amigos peludos.</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/galeria.js"></script>
+  </body>
+</html>

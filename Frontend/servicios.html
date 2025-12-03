@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Servicios</title>
+    <script src="https://kit.fontawesome.com/65078b1b4d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./recursos/logo.png" alt="Logo">
+        </div>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html" class="active">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li class="button-header"><a href="contacto.html">Conversemos</a></li>
+        </ul>
+
+        <div class="nav-overlay"></div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="table-container-dark">
+        <div class="table-content">
+          <h1 class="text-invert">Requisitos para acceder a los servicios</h1>
+          <div class="service-cards">
+            <div class="card">
+              <i class="fa-regular fa-syringe"></i>
+              <h3>Vacunación completa</h3>
+              <p>Necesitamos el carné de vacunación actualizado con todas las vacunas obligatorias y desparasitación interna al día.</p>
+            </div>
+
+            <div class="card">
+              <i class="fa-regular fa-bug"></i>
+              <h3>Pipeta o collar antipulgas</h3>
+              <p>Es indispensable que tu compañero cuente con pipeta o collar antipulgas y garrapatas vigente antes de su ingreso.</p>
+            </div>
+
+            <div class="card">
+              <i class="fa-regular fa-heart"></i>
+              <h3>Evaluación de temperamento</h3>
+              <p>Queremos que todos disfruten. Por eso, agendaremos una visita previa para conocer a tu perro y asegurar su buena convivencia.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-content">
+        <div id="servicesMain"></div>
+        <h2>Servicios adicionales</h2>
+        <div class="service-cards" id="servicesAddons"></div>
+        <a class="button-primary" type="button" href="contacto.html">Conversemos</a>
+      </section>  
+    </main>  
+    
+    <footer>
+      <p>© 2025 Yuquerí. Todos los derechos reservados. Hecho con ❤️ para nuestros amigos peludos.</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/servicios.js"></script>
+  </body>
+</html>
