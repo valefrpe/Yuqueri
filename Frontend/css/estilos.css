@@ -70,6 +70,7 @@ main
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  align-items: center;
 }
 
 .card i, .service-info>i
@@ -508,6 +509,12 @@ footer p
     border: 0;
     border-radius: 14px;
   }
+
+  i.fa-regular.fa-envelope ~ p
+  {
+    position: relative;
+    right: 8px;
+  }
 }
 
 /* SERVICES */
@@ -705,7 +712,8 @@ footer p
   border-radius: 50%;
   overflow: hidden;
   justify-self: center;
-  margin-bottom: 18px;
+  margin: 0 auto 18px;
+  display: block;
 }
 
 .testimonial-img img
