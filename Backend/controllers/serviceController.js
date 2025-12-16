@@ -11,12 +11,10 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-/*Algunos campos llegan como "true"/"on" desde el formulario*/
 function esVerdadero(valor) {
   return valor === true || valor === "true" || valor === "on";
 }
 
-/*Sube una imagen a Cloudinary usando el buffer que llega desde multer*/
 function subirImagenDesdeBuffer(buffer) {
   return new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream(
@@ -34,7 +32,7 @@ function subirImagenDesdeBuffer(buffer) {
   });
 }
 
-/*GET /api/services*/
+/*GET*/
 export const getServices = async (req, res) => {
   try {
     // Traigo todos y los ordeno del más nuevo al más viejo
@@ -46,7 +44,7 @@ export const getServices = async (req, res) => {
   }
 };
 
-/*GET /api/services/:id*/
+/*GET*/
 export const getServiceById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -63,7 +61,7 @@ export const getServiceById = async (req, res) => {
   }
 };
 
-/*POST /api/services*/
+/*POST*/
 export const createService = async (req, res) => {
   try {
     const {
@@ -79,7 +77,6 @@ export const createService = async (req, res) => {
       image,
     } = req.body;
 
-    /*Validaciones básicas de campos obligatorios*/
     if (!icon || !icon.trim()) {
       return res.status(400).json({ message: "El ícono es obligatorio" });
     }
@@ -169,7 +166,7 @@ export const createService = async (req, res) => {
   }
 };
 
-/*PUT /api/services/:id*/
+/*PUT*/
 export const updateService = async (req, res) => {
   try {
     const { id } = req.params;
@@ -265,7 +262,7 @@ export const updateService = async (req, res) => {
   }
 };
 
-/*DELETE /api/services/:id*/
+/*DELETE*/
 export const deleteService = async (req, res) => {
   try {
     const { id } = req.params;

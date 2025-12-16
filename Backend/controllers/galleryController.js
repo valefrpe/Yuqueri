@@ -28,7 +28,7 @@ function subirImagenDesdeBuffer(buffer) {
   });
 }
 
-/*GET /api/gallery*/
+/*GET*/
 export const getGallery = async (req, res) => {
   try {
     const filtro = {};
@@ -46,7 +46,7 @@ export const getGallery = async (req, res) => {
   }
 };
 
-/*POST /api/gallery*/
+/*POST*/
 export const createItem = async (req, res) => {
   try {
     const { title, active } = req.body;
@@ -81,7 +81,7 @@ export const createItem = async (req, res) => {
   }
 };
 
-/*PUT /api/gallery/:id*/
+/*PUT*/
 export const updateItem = async (req, res) => {
   try {
     const { id } = req.params;
@@ -118,7 +118,7 @@ export const updateItem = async (req, res) => {
   }
 };
 
-/*DELETE /api/gallery/:id*/
+/*DELETE*/
 export const deleteItem = async (req, res) => {
   try {
     const { id } = req.params;

@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-/* POST /api/auth/register */
+/*POST*/
 export const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -37,7 +37,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-/*POST /api/auth/login*/
+/*POST*/
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -49,7 +49,6 @@ export const loginUser = async (req, res) => {
         .json({ message: "Necesitás enviar email y contraseña" });
     }
 
-    /*Busco un usuario con ese email y contraseña*/
     const usuario = await User.findOne({ email, password });
 
     if (!usuario) {
@@ -77,10 +76,9 @@ export const loginUser = async (req, res) => {
   }
 };
 
-/*POST /api/auth/logout*/
+/*POST*/
 export const logoutUser = async (req, res) => {
   try {
-    /*Leo el token de sesión que viene en el header*/
     const token = req.headers["authorization"];
 
     if (!token) {
